@@ -1,0 +1,37 @@
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+var pantalla = document.querySelector("canvas")
+var pincel = pantalla.getContext("2d");
+pincel.fillStyle = "lightgray";
+pincel.fillRect(0,0,600,400)
+
+function dibujarrectangulo(x,y,altura,color){
+    pincel.fillStyle=color;
+    
+    pincel.beginPath();
+
+    pincel.fillRect(x,y,20,altura)
+    
+    pincel.fill()
+
+}
+
+anio2009 = [6,47,41,3,3]
+color2009 = ["blue","green","yellow","red","grey"]
+
+anio2019 = [81,9,3,3,4]
+
+sumaaltura=0
+for (let i = 0; i < anio2009.length; i++) {
+   
+        
+        dibujarrectangulo(100,  sumaaltura,anio2009[i] , color2009[i]);
+
+        sumaaltura=sumaaltura+anio2009[i]
+        
+}
+
+
+</script> 

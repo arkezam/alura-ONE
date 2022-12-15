@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+
+    if (edad >= 18 ){
+    	imprimir("eres mayor de edad por lo tanto puedes conducir ")
+    }
+    else
+    {
+    	imprimir("Lo lamento eres menor de edad, no puedes conducir hasta dentro de " + (18 - edad) + " años")
+    }
+
+</script>

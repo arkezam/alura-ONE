@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+
+<input type="text">
+<button>
+    presionar
+</button>
+
+<script>
+
+	function aleatorio(){
+		return Math.round(Math.random()*10 + 1);
+	}
+
+
+	function imprimir(texto){
+		document.write("<br>" + texto + "<br>");
+	}
+
+
+
+	function introducir(){
+		var eleccion = parseInt(prompt("Elige un numero"));
+		return eleccion;
+	}
+
+	function secretos(){
+		var escondido = [];
+		var contador = 0;
+		
+		while (contador <= 4){
+			var encontrado = false;
+			var a = aleatorio();
+			
+			for (var i = 0; i < escondido.length ; i++) {
+				if(a==escondido[i]){
+
+					encontrado = true;
+				
+				}
+
+
+			}
+
+
+			if (encontrado==false) {
+
+				escondido.push(a)
+
+			contador ++		
+				}
+
+				
+		}
+		return escondido;
+
+
+	}
+imprimir(secretos())
+
+
+
+
+</script>

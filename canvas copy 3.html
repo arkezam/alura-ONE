@@ -1,0 +1,30 @@
+<canvas width="600" height="400"> </canvas>
+ 
+
+<script>
+
+var pantalla = document.querySelector("canvas")
+var pincel = pantalla.getContext("2d");
+pincel.fillStyle = "green";
+pincel.fillRect(0,0,500,600)
+
+
+function alertar(evento){
+    console.log(evento)
+    alert("hizo click")
+}
+
+function dibujar(evento){
+    var x = evento.pageX-pantalla.offsetLeft;
+    var y = evento.pageY-pantalla.offsetTop;
+    pincel.beginPath();
+    pincel.arc(x,y,110,0,2*3.14)
+    pincel.fillStyle="white"
+    pincel.fill()
+    console.log(evento)
+}
+
+
+pantalla.onclick = dibujar
+
+</script> 
