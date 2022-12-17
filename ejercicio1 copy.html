@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+
+
+<script>
+function disemvowel(str) {
+  
+    let vowels = "qwtypsdfrghjklzxcvbnmQWRTYIPSDFGHJKLZXCVBNM! ";
+  let newstr="";
+  let cont = 0;
+  for(let i = 0; i < str.length;i++){
+    
+    for (let j = 0; j < vowels.length; j++) {
+        if( str[i] == vowels[j]){
+            newstr = newstr+str[i]   
+        }
+    }
+    
+  }
+  
+  return newstr;
+}
+
+document.write(disemvowel("write words using without vowels using loops"));
+
+</script>
