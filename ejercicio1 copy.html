@@ -2,24 +2,31 @@
 
 
 <script>
-function disemvowel(str) {
+
+const text = 'Hola   mundo';
+const modifiedText = text.replace(/\s/g, '');
+console.log(modifiedText);
+
+function disemvowel(l) {
   
-    let vowels = "qwtypsdfrghjklzxcvbnmQWRTYIPSDFGHJKLZXCVBNM! ";
-  let newstr="";
+  let numbers = "1234567890";
+  let newArr=[];
   let cont = 0;
-  for(let i = 0; i < str.length;i++){
+
+
+  for(let i = 0; i < l.length;i++){
     
-    for (let j = 0; j < vowels.length; j++) {
-        if( str[i] == vowels[j]){
-            newstr = newstr+str[i]   
+    for (let j = 0; j < numbers.length; j++) {
+        if( l[i] == numbers[j]){
+            newArr.push(l[i])   
         }
     }
     
   }
   
-  return newstr;
+  return newArr;
 }
 
-document.write(disemvowel("write words using without vowels using loops"));
+document.write(disemvowel([11,"a","s",12]));
 
 </script>
